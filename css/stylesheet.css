@@ -1,0 +1,50 @@
+body {
+    background-color:rgba(19, 19, 19, 0.932);
+    margin: 10px;
+    font-family: "josephine-sans", sans-serif;
+    color:rgba(255, 255, 255, 0.87);
+    text-align:center;
+}
+
+#navbar {
+    text-align:center;
+    background-color: rgba(37, 37, 37, 0.918);
+    overflow: hidden;
+    list-style-type:none;
+    margin:0;
+    padding:5px;
+}
+
+#navlink {
+    float: left;
+}
+
+h1 {
+    color:rgba(95, 110, 241, 0.932);
+}
+h2 {
+    color:rgba(106, 214, 241, 0.9320);
+}
+
+#blurb {
+    margin:auto;
+    border:20px rgb(160, 153, 153);
+}
+
+h3 {
+    color:rgba(245, 140, 80, 0.897);
+}
+
+#top-ten {
+    margin:auto;
+    text-align:left;
+}
+#otherlist {
+    margin:auto;
+    text-align: left;
+}
+
+footer {
+    margin: 10px;
+    color:rgba(100, 197, 129, 0.863)
+}
