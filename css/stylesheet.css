@@ -5,20 +5,20 @@ body {
     color:rgba(255, 255, 255, 0.87);
 }
 
-.header {
+header {
     padding: 40px;
 }
-.header h2 {
+header h2 {
     padding-bottom:16px;
 }
-p .header {
+p header {
     padding: 10px;
 }
 
-div p span.confusion{
+header p span.confusion{
     color: rgba(100, 197, 129, 0.863)
 }
-div p span.display{
+header p span.display{
     color:rgba(147, 40, 156, 0.863);
 }
 
@@ -51,19 +51,36 @@ h2 {
 }
 
 .intro {
-    width:420px;
-    padding: 14px;
+    width:520px;
+    padding: 16px;
     border: 2px solid rgba(245, 140, 80, 0.897);
-    margin: 17px;
+    margin: auto;
     text-align: justify;
 
 }
 
+.lists {
+    margin: auto;
+    display: inline-block;
+    padding: 20px;
+}
+
 h3 {
+    padding: 8px;
     font-size:19px;
     color:rgba(245, 140, 80, 0.897);
+    text-decoration:underline;
+    text-decoration-color: rgba(106, 214, 241, 0.9320);
 }
 footer {
     color:rgba(90, 199, 123, 0.932);
     padding: 17px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:150;
+}
+
+main.images {
+    align-content: center;
 }
