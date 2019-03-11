@@ -11,14 +11,14 @@ header {
 header h2 {
     padding-bottom:16px;
 }
-p header {
+pre header {
     padding: 10px;
 }
 
-header p span.confusion{
+header pre span.confusion{
     color: rgba(100, 197, 129, 0.863)
 }
-header p span.display{
+header pre span.display{
     color:rgba(147, 40, 156, 0.863);
 }
 
@@ -51,22 +51,24 @@ h2 {
 }
 
 .intro {
-    width:520px;
+    width:95%;
     padding: 16px;
-    border: 2px solid rgba(245, 140, 80, 0.897);
-    margin: auto;
+    border-left: 2px solid rgba(245, 140, 80, 0.897);
     text-align: justify;
+    margin: 5px;
 
 }
 
 .lists {
-    margin: auto;
     display: inline-block;
     padding: 20px;
+    text-align: center;
+
 }
 
 h3 {
     padding: 8px;
+    padding: 10px;
     font-size:19px;
     color:rgba(245, 140, 80, 0.897);
     text-decoration:underline;
@@ -80,7 +82,29 @@ footer {
     right:0;
     width:150;
 }
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+}
 
-main.images {
-    align-content: center;
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.iframe-box {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.iframe-box iframe {
+    border: 0;
+    height: 25%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25%;
 }
