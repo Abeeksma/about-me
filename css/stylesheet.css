@@ -11,14 +11,14 @@ header {
 header h2 {
     padding-bottom:16px;
 }
-pre header {
+header pre {
     padding: 10px;
 }
 
-header pre span.confusion{
+span.confusion{
     color: rgba(100, 197, 129, 0.863)
 }
-header pre span.display{
+span.display{
     color:rgba(147, 40, 156, 0.863);
 }
 
