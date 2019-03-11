@@ -85,7 +85,9 @@ footer {
 .column {
     float: left;
     width: 33.33%;
-    padding: 20px;
+    padding-top:15px;
+    padding-bottom: 30px;
+    padding-left: 50px;
 }
 
 .row::after {
@@ -102,9 +104,9 @@ footer {
 
 .iframe-box iframe {
     border: 0;
-    height: 25%;
+    height: 80%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 25%;
+    width: 80%;
 }
