@@ -1,4 +1,5 @@
 'use strict';
+//silly prompt question bs
 var programmer = prompt(' What is your name? ');
 var how = prompt(' How are you?');
 var favColor = prompt(' What is your favorite color?');
@@ -10,7 +11,8 @@ console.log('How are you?', how);
 console.log('What is your favorite color?', favColor);
 console.log('What is the meaning to life the universe and everything?', something);
 
-//quiz shit
+//quiz shit//
+
 //1
 var firstResponse =prompt('Am I from Wisconsin?');
 if(firstResponse === 'yes' || firstResponse === 'y') {
@@ -26,7 +28,7 @@ if(secondResponse === 'yes' || secondResponse === 'y') {
   alert('Huzzah, you got another. I bet you feel sooooo pleased');
 }
 else if(secondResponse === 'no' || secondResponse === 'n') {
-  alert('HA! You have no understanding of Pantera do you!');
+  alert('You have no understanding of Pantera or life');
 }
 
 //3
@@ -35,5 +37,23 @@ if(thirdResponse === 'yes' || thirdResponse === 'y') {
   alert('Go you! I tire of it...');
 }
 else if(thirdResponse === 'no' || thirdResponse === 'n') {
-  alert('')
+  alert('failure');
+}
+
+//4
+var fourthResponse =prompt('Have I been to Sweden?');
+if(fourthResponse === 'yes' || fourthResponse === 'y') {
+  alert('I wish you were right');
+}
+else if(fourthResponse === 'no' || fourthResponse === 'n'); {
+  alert('Unfortunately you are correct...someday I will go');
+}
+
+//5
+var fifthResponse =prompt('');
+if(fifthResponse === '' || fifthResponse === '') {
+  alert('');
+}
+else if(fifthResponse === '' || fifthResponse === '') {
+  alert('');
 }
