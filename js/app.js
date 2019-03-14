@@ -1,3 +1,4 @@
+
 // 'use strict';
 // //silly prompt question bs//
 // var programmer = prompt(' What is your name? ');
@@ -14,7 +15,6 @@
 // //quiz shit and fucking prying nonsense//
 // var correctAnswers = 0;
 // var incorrectAnswers = 0;
-
 
 
 
@@ -89,5 +89,6 @@ for(var i = 0; i <= tryIt; i++) {
   }
 }
 }
+
 alert('All tries consumed, the correct answers were ' + fuckIt[0] + ' ' + fuckIt[1] + ' ' + fuckIt[2] + ' ');
 alert('You got ' + correctAnswers + ' correct and answered incorrectly ' + incorrectAnswers + ' time(s). Don\'t you feel like a special little snowflake?');
