@@ -1,6 +1,8 @@
 # about-me
 A little about me
 
-For, example I can now clone from GitHub!
+Have some tiddly bits from my life
 
-Change time!
+Lists liable to become outdated or irrelevant at any point in time
+
+Have a pleasant day, or whatever day it is you're having. 

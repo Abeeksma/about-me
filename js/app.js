@@ -81,7 +81,7 @@ var tries = 0;
 while(tries !== 4){
   var userGuess = prompt('How many siblings do I have? ' + 'You have 4 attempts to guess.');
 
-  if(userGuess == 7) {
+  if(userGuess === 7) {
     alert('That is correct. I have 2 older brothers and 5 younger sisters.');
     tries = 4;
     correctAnswers++;
