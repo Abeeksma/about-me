@@ -65,23 +65,27 @@ else if(fifthResponse.toLowerCase() === 'no' || fifthResponse.toLowerCase() === 
 //6th question prompt for numerical input, tell wether higher or lower, 4 attempts//
 var tries = 0;
 
-while(tries !== 4){
+while(tries < 5) {
   var userGuess = prompt('How many siblings do I have? ' + 'You have 4 attempts to guess.');
-
-  if(userGuess === 7) {
-    alert('That is correct. I have 2 older brothers and 5 younger sisters.');
-    tries = 4;
+  console.log(`before guess tries ${tries}`);
+  if(userGuess === '7') {
+    tries = 5;
+    console.log(`correct guess tries ${tries}`);
     correctAnswers++;
+    alert('That is correct. I have 2 older brothers and 5 younger sisters.');
   }
   else if(userGuess > 7) {
+    tries = tries + 1;
+    incorrectAnswers++;
     alert('Your guess was too high!');
-    tries =tries + 1;
-    incorrectAnswers++;
   }
+
+
   else if(userGuess < 7) {
-    alert('Your guess was too low!');
-    tries =tries + 1;
+    tries = tries + 1;
     incorrectAnswers++;
+    alert('Your guess was too low!');
+
   }
 }
 
