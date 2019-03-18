@@ -5,3 +5,5 @@ var how = prompt(' How are you?');
 var favColor = prompt(' What is your favorite color?');
 var something = prompt(' What is the meaning to life the universe and everything?');
 alert('Hello ' + programmer + ' who feels ' + how + ' liking ' + favColor + '. You think the meaning to life the universe and everything is ' + something);
+
+//maybe makek and onload functiony thingamabob for these silly prompts
