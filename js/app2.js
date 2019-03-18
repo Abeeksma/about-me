@@ -1,120 +1,89 @@
 //quiz shit and fucking prying nonsense//
-var correctAnswers = 0;
-var incorrectAnswers = 0;
+var correctPoints = 0;
+var incorrectPoints = 0;
 
-//1//
-var firstResponse =prompt('Am I from Wisconsin?');
-console.log(firstResponse);
-if(firstResponse.toLowerCase() === 'yes' || firstResponse.toLowerCase() === 'y') {
-  alert('Huzzah, that is correct');
-  correctAnswers++;
-}
-else if(firstResponse.toLowerCase() === 'no' || firstResponse.toLowerCase() === 'n') {
-  alert('You have failed me!');
-  incorrectAnswers++;
-}
+//function to run all questions after onload even in html script *************************
 
-//2//
-var secondResponse =prompt('Do I like Pantera?');
-console.log(secondResponse);
-if(secondResponse.toLowerCase() === 'yes' || secondResponse.toLowerCase() === 'y') {
-  alert('Huzzah, you got another. I bet you feel sooooo pleased');
-  correctAnswers++;
-}
-else if(secondResponse.toLowerCase() === 'no' || secondResponse.toLowerCase() === 'n') {
-  alert('You have no understanding of Pantera or life');
-  incorrectAnswers++;
-}
+function askquestion() {
 
-//3//
-var thirdResponse =prompt('Am I sick of questions about me?');
-console.log(thirdResponse);
-if(thirdResponse.toLowerCase() === 'yes' || thirdResponse.toLowerCase() === 'y') {
-  alert('Go you! I tire of it...');
-  correctAnswers++;
-}
-else if(thirdResponse.toLowerCase() === 'no' || thirdResponse.toLowerCase() === 'n') {
-  alert('failure');
-  incorrectAnswers++;
-}
+  yesNoQuestions('Am I from Wisconsin?', 'yes', 'Huzzah, that is correct', 'You have failed me!');
+  yesNoQuestions('Do I like Pantera', 'yes', 'Huzzah, you got another. I bet you feel soooooo pleased.', 'You have no understanding of Pantera or life.');
+  yesNoQuestions('Am I sick of questions about me', 'yes', 'Go you! I tire of it...', 'Failure');
+  yesNoQuestions('Have I been to Sweden', 'no', 'Unfortunately you are correct. Someday I hope to go', 'I wish that was correct');
+  yesNoQuestions('Has my band released multiple albums?', 'no', 'Correct, we have one self released album and are working on a second.', 'Be patient, we are working on it.');
 
-//4//
-var fourthResponse =prompt('Have I been to Sweden?');
-console.log(fourthResponse);
-if(fourthResponse.toLowerCase() === 'yes' || fourthResponse.toLowerCase() === 'y') {
-  alert('I wish you were right');
-  incorrectAnswers++;
-}
-else if(fourthResponse.toLowerCase() === 'no' || fourthResponse.toLowerCase() === 'n') {
-  alert('Unfortunately you are correct...someday I will go');
-  correctAnswers++;
-}
+  var tries = 0;
 
-//5//
-var fifthResponse =prompt('Has my band released multiple albums?');
-console.log(fifthResponse);
-if(fifthResponse.toLowerCase() === 'yes' || fifthResponse.toLowerCase() === 'y') {
-  alert('Be patient, we are working on it');
-  incorrectAnswers++;
-}
-else if(fifthResponse.toLowerCase() === 'no' || fifthResponse.toLowerCase() === 'n') {
-  alert('Correct, we have one self released album. We are working on the second!');
-  correctAnswers++;
-}
+  while(tries < 5) {
+    var userGuess = prompt('How many siblings do I have? ' + 'You have 4 attempts to guess.');
+    if(userGuess === '7') {
+      tries = 5;
+      correctPoints++;
+      alert('That is correct. I have 2 older brothers and 5 younger sisters.');
+    }
+    else if(userGuess > 7) {
+      tries = tries + 1;
+      incorrectPoints++;
+      alert('Your guess was too high!');
+    }
 
-//6th question prompt for numerical input, tell wether higher or lower, 4 attempts//
-var tries = 0;
 
-while(tries < 5) {
-  var userGuess = prompt('How many siblings do I have? ' + 'You have 4 attempts to guess.');
-  console.log(`before guess tries ${tries}`);
-  if(userGuess === '7') {
-    tries = 5;
-    console.log(`correct guess tries ${tries}`);
-    correctAnswers++;
-    alert('That is correct. I have 2 older brothers and 5 younger sisters.');
-  }
-  else if(userGuess > 7) {
-    tries = tries + 1;
-    incorrectAnswers++;
-    alert('Your guess was too high!');
+    else if(userGuess < 7) {
+      tries = tries + 1;
+      incorrectPoints++;
+      alert('Your guess was too low!');
+
+    }
   }
 
+  //7th question, array with multiple correct answers up to 7 attempts//
 
-  else if(userGuess < 7) {
-    tries = tries + 1;
-    incorrectAnswers++;
-    alert('Your guess was too low!');
+  var fuckIt = ['wisconsin', 'iowa', 'arizona'];
+  var tryIt = 6;
 
+  for(var i = 0; i <= tryIt; i++) {
+    var numberSeven = prompt('What is one of the states that I have I lived in?');
+    if(numberSeven === fuckIt [0]) {
+      alert('Huuufuckingraw!!');
+      correctPoints++;
+      break;
+    }
+    if(numberSeven === fuckIt [1]) {
+      alert('Oh boy aren\'t you just so smart');
+      correctPoints++;
+      break;
+    }
+    if(numberSeven === fuckIt [2]) {
+      alert('Fuck yeah!');
+      correctPoints++;
+      break;
+    }
+    else {
+      alert('Dead wrong doofus!');
+      incorrectPoints++;
+    }
   }
+  alert('All tries consumed, the correct answers were ' + fuckIt[0] + ' ' + fuckIt[1] + ' ' + fuckIt[2] + ' ');
+  alert('You got ' + correctPoints + ' correct and answered incorrectly ' + incorrectPoints + ' time(s). Don\'t you feel like a special little snowflake?');
 }
 
-//7th question, array with multiple correct answers up to 7 attempts//
+//function to make yes no questions work **************************************************
 
-var fuckIt = ['wisconsin', 'iowa', 'arizona'];
-var tryIt = 6;
-
-for(var i = 0; i <= tryIt; i++) {
-  var numberSeven = prompt('What is one of the states that I have I lived in?');
-  if(numberSeven === fuckIt [0]) {
-    alert('Huuufuckingraw!!');
-    correctAnswers++;
-    break;
+function yesNoQuestions(questionPrompt, correctAnswer, correctAlert, incorrectAlert) {
+  var promptResponse = prompt(questionPrompt).toLowerCase();
+  if (promptResponse !== 'yes' && promptResponse !== 'y' && promptResponse !== 'no' && promptResponse !== 'n') {
+    alert('Please enter a Yes or No answer.');
   }
-  if(numberSeven === fuckIt [1]) {
-    alert('Oh boy aren\'t you just so smart');
-    correctAnswers++;
-    break;
+  else if (correctAnswer === 'yes' && (promptResponse === 'y' || promptResponse === 'yes')) {
+    alert(correctAlert);
+    correctPoints++;
   }
-  if(numberSeven === fuckIt [2]) {
-    alert('Fuck yeah!');
-    correctAnswers++;
-    break;
+  else if(correctAnswer === 'no' && (promptResponse === 'no' || promptResponse === 'n')) {
+    alert(correctAlert);
+    correctPoints++;
   }
   else {
-    alert('Dead wrong doofus!');
-    incorrectAnswers++;
+    alert(incorrectAlert);
+    incorrectPoints++;
   }
 }
-alert('All tries consumed, the correct answers were ' + fuckIt[0] + ' ' + fuckIt[1] + ' ' + fuckIt[2] + ' ');
-alert('You got ' + correctAnswers + ' correct and answered incorrectly ' + incorrectAnswers + ' time(s). Don\'t you feel like a special little snowflake?');
